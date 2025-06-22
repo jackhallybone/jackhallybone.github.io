@@ -1,0 +1,178 @@
+/*! modern-normalize v3.0.1 | MIT License | https://github.com/sindresorhus/modern-normalize */
+*,::after,::before{box-sizing:border-box}html{font-family:system-ui,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji';line-height:1.15;-webkit-text-size-adjust:100%;tab-size:4}body{margin:0}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{border-color:currentcolor}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}legend{padding:0}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}
+
+/* Reset */
+
+*,
+::after,
+::before,
+::backdrop,
+::file-selector-button {
+  margin: 0;
+  padding: 0;
+}
+
+/* General */
+
+:root {
+  --color-accent: #F0B969;
+
+  color-scheme: light dark;
+
+  --color-background: #FFFFFF;
+  --color-foreground: #3C2319;
+  --color-foreground-full: #000000;
+  --color-surface: #F2EDE5;
+  --color-link: #997643;
+  --color-link-hover: #7B5F36;
+  --color-code-background: #D5D1CA;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: #272725;
+    --color-foreground: #F2EDE5;
+    --color-foreground-full: #FFFFFF;
+    --color-surface: #434340;
+    --color-link: #F4E3C9;
+    --color-link-hover: #D8C8B1;
+    --color-code-background: #84847D;
+  }
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: "Inter", Arial, sans-serif;
+  line-height: 1.25;
+  margin: auto;
+  padding-inline: 1rem;
+  max-width: 1280px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 500;
+}
+
+h1, h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+a {
+  color: var(--color-link);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-link-hover);
+}
+
+code {
+  font-family: "Fragment Mono", 'Courier New', Courier, monospace;
+  font-size: 0.95em;
+  background: var(--color-code-background);
+  padding: 0 0.125em;
+  border-radius: 0.25em;
+}
+
+/* Header and Nav */
+
+header {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* About/Splash Section */
+
+#about {
+  min-height: calc(100vh - 60px); /* less the height of the header */
+  padding-block: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+#about img {
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+}
+
+.social-icons {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.social-icons svg {
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  fill: var(--color-foreground);
+}
+
+.social-icons svg:hover {
+  opacity: 90%;
+}
+
+/* Content Section(s) */
+
+section:not(#about) {
+  border-top: 1px solid var(--color-foreground);
+  padding-block: 1rem;
+  /* top and bottom */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+article {
+  background-color: var(--color-surface);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+article .extra-content {
+  display: none;
+}
+
+article .see-more-btn {
+  background: none;
+  border: none;
+  display: inline-block;
+  width: fit-content;
+  font: inherit;
+  color: var(--color-link);
+  cursor: pointer;
+}
+
+article .see-more-btn:hover {
+  color: var(--color-link-hover);
+}
