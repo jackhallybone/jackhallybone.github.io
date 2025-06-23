@@ -163,7 +163,7 @@ article .extra-content {
   display: none;
 }
 
-article .see-more-btn {
+article .show-more-btn {
   background: none;
   border: none;
   display: inline-block;
@@ -173,6 +173,6 @@ article .see-more-btn {
   cursor: pointer;
 }
 
-article .see-more-btn:hover {
+article .show-more-btn:hover {
   color: var(--color-link-hover);
 }

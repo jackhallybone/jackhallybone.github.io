@@ -82,7 +82,7 @@
 
       <article>
         <h3>A shorter example project.</h3>
-        <p>This example project has no additional content and so no "see more" button.</p>
+        <p>This example project has no additional content and so no "Show More" button.</p>
       </article>
 
     </section>
@@ -90,18 +90,18 @@
   </main>
 
   <script>
-    // Add and link up a "See More/Less" button for articles with extra content
+    // Add and link up a "Show More/Less" button for articles with extra content
     document.querySelectorAll('article').forEach(article => {
       const extra_content = article.querySelector('.extra-content');
       if (extra_content) {
         const button = document.createElement('button');
-        button.className = 'see-more-btn';
-        button.textContent = 'See More';
+        button.className = 'show-more-btn';
+        button.textContent = 'Show More';
         article.appendChild(button);
         button.addEventListener('click', () => {
           const expanded = article.classList.toggle('expanded');
           extra_content.style.display = expanded ? 'block' : 'none';
-          button.textContent = expanded ? 'See Less' : 'See More';
+          button.textContent = expanded ? 'Show Less' : 'Show More';
         });
       }
     });
