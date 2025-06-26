@@ -86,12 +86,11 @@
         </div>
       </article>
 
-      <article>
-        <h3>A shorter example project.</h3>
-        <p>This example project has no additional content and so no "Show More" button.</p>
-      </article>
-
     </section>
+
+    <footer>
+      <p><a href="#" title="Back to top">↑</a></p>
+    </footer>
 
   </main>
 
@@ -106,7 +105,6 @@
         article.appendChild(button);
         button.addEventListener('click', () => {
           const expanded = article.classList.toggle('expanded');
-          extra_content.style.display = expanded ? 'block' : 'none';
           button.textContent = expanded ? 'Show Less' : 'Show More';
         });
       }
