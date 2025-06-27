@@ -41,7 +41,7 @@
 }
 
 html {
-  font-size: 16px;
+  font-size: 100%;
   scroll-behavior: smooth;
 }
 
@@ -72,9 +72,6 @@ h3 {
 
 a {
   text-decoration: none;
-}
-
-a {
   color: var(--color-link);
 }
 
@@ -82,11 +79,15 @@ a:hover {
   color: var(--color-link-hover);
 }
 
-h1 a, h2 a, h3 a {
+h1 a,
+h2 a,
+h3 a {
   color: inherit;
 }
 
-h1 a:hover, h2 a:hover, h3 a:hover {
+h1 a:hover,
+h2 a:hover,
+h3 a:hover {
   color: inherit;
 }
 
@@ -121,7 +122,7 @@ header nav ul {
   margin-right: 1rem;
 } */
 
-@media (max-width: 350px) {
+@media (max-width: 22rem) {
   header {
     flex-direction: column;
     justify-content: center;
@@ -141,8 +142,8 @@ header nav ul {
 }
 
 #about .profile img {
-  height: 15rem;
   width: 15rem;
+  height: 15rem;
   border-radius: 50%;
 }
 
@@ -169,15 +170,15 @@ header nav ul {
   opacity: 90%;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 50rem) {
   #about {
     flex-direction: column;
     gap: 1rem;
   }
 
   #about .profile img {
-    height: 13rem;
     width: 13rem;
+    height: 13rem;
   }
 
   #about .intro {
@@ -189,6 +190,7 @@ header nav ul {
 
 section:not(#about) {
   border-top: 1px solid var(--color-foreground);
+  margin-top: 1px;
   padding-block: 1rem;
   display: flex;
   flex-direction: column;
